@@ -3,20 +3,51 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@expo/vector-icons": "^15.0.2",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-navigation/bottom-tabs": "^7.18.4",
+    "@react-navigation/native": "^7.3.5",
+    "@react-navigation/native-stack": "^7.17.7",
     "expo": "~57.0.1",
+    "expo-font": "~57.0.0",
+    "expo-haptics": "~57.0.0",
+    "expo-localization": "~57.0.0",
     "expo-status-bar": "~57.0.0",
+    "i18next": "^26.3.4",
     "react": "19.2.3",
-    "react-native": "0.86.0"
+    "react-dom": "19.2.3",
+    "react-i18next": "^17.0.8",
+    "react-native": "0.86.0",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "4.25.2",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.0",
     "@types/react": "~19.2.2",
-    "typescript": "~6.0.3"
+    "@types/topojson-client": "^3.1.5",
+    "@types/topojson-server": "^3.0.4",
+    "@types/topojson-simplify": "^3.0.3",
+    "all-the-cities": "^3.1.0",
+    "country-state-city": "^3.2.1",
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1",
+    "topojson-simplify": "^3.0.3",
+    "typescript": "~6.0.3",
+    "world-atlas": "^2.0.2",
+    "world-countries": "^5.1.0",
+    "world-geojson": "^3.4.0"
   },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "generate-map": "node scripts/generateMap.js",
+    "generate-regions": "node scripts/generateRegions.js",
+    "generate-cities": "node scripts/generateCities.js"
   },
   "private": true
 }

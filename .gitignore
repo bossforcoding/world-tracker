@@ -39,3 +39,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# large raw source dataset (39MB) — regenerate with scripts/data/fetch-admin1.sh
+scripts/data/admin1-raw.geojson

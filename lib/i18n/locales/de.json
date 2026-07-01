@@ -1,0 +1,67 @@
+{
+  "tabs": {
+    "map": "Karte",
+    "capitals": "Hauptstädte",
+    "passport": "Reisepass"
+  },
+  "map": {
+    "title": "World Tracker",
+    "countriesVisited": "{{count}} / {{total}} Länder besucht",
+    "searchPlaceholder": "Länder oder Städte suchen...",
+    "searchNoMatch": "Keine Treffer gefunden."
+  },
+  "capitals": {
+    "title": "Hauptstädte der Welt",
+    "visitedCount": "{{count}} / {{total}} Hauptstädte besucht",
+    "searchPlaceholder": "Hauptstädte oder Länder suchen..."
+  },
+  "passport": {
+    "title": "Mein Reisepass",
+    "percentExplored": "der Welt erkundet",
+    "countriesCount": "{{count}} / {{total}} Länder",
+    "capitalsVisited": "🏛️ Besuchte Hauptstädte",
+    "continents": "Kontinente",
+    "visitedCountries": "Besuchte Länder ({{count}})",
+    "emptyHint": "Tippe auf ein Land auf der Karte, um deinen Reisepass zu füllen."
+  },
+  "countryDetail": {
+    "notFound": "Land nicht gefunden.",
+    "markVisited": "Ganzes Land als besucht markieren",
+    "markedVisited": "✓ Ganzes Land besucht",
+    "regionsCount": "Regionen ({{count}} / {{total}})",
+    "regionsHint": "Tippe auf eine Region auf der Karte, um sie als besucht zu markieren. Tippe sie in der Liste an, um ihre Städte zu sehen.",
+    "searchRegions": "Regionen suchen...",
+    "noRegionsMatch": "Keine Regionen entsprechen deiner Suche.",
+    "citiesInRegion": "Städte in {{region}}",
+    "noCitiesInRegion": "Keine erfassten Städte in dieser Region.",
+    "citiesCount": "Städte ({{count}} / {{total}})",
+    "searchCities": "Städte suchen...",
+    "noCitiesMatch": "Keine Städte entsprechen deiner Suche."
+  },
+  "continents": {
+    "Africa": "Afrika",
+    "Americas": "Amerika",
+    "Antarctic": "Antarktis",
+    "Asia": "Asien",
+    "Europe": "Europa",
+    "Oceania": "Ozeanien"
+  },
+  "badges": {
+    "sectionTitle": "Abzeichen",
+    "countries_1": { "title": "Erste Schritte", "desc": "Besuche dein erstes Land" },
+    "countries_5": { "title": "Entdecker", "desc": "Besuche 5 Länder" },
+    "countries_25": { "title": "Weltenbummler", "desc": "Besuche 25 Länder" },
+    "countries_100": { "title": "Hundert-Club", "desc": "Besuche 100 Länder" },
+    "countries_all": { "title": "Weltmeister", "desc": "Besuche jedes Land der Welt" },
+    "continent_africa": { "title": "Afrika-Entdecker", "desc": "Besuche jedes Land Afrikas" },
+    "continent_americas": { "title": "Amerika-Entdecker", "desc": "Besuche jedes Land Amerikas" },
+    "continent_asia": { "title": "Asien-Entdecker", "desc": "Besuche jedes Land Asiens" },
+    "continent_europe": { "title": "Europa-Entdecker", "desc": "Besuche jedes Land Europas" },
+    "continent_oceania": { "title": "Inselhüpfer", "desc": "Besuche jedes Land Ozeaniens" },
+    "continent_antarctic": { "title": "Pinguin-Club", "desc": "Besuche die Antarktis" },
+    "capitals_10": { "title": "Hauptstadt-Sammler", "desc": "Besuche 10 Hauptstädte der Welt" },
+    "capitals_all": { "title": "Diplomat", "desc": "Besuche jede Hauptstadt der Welt" },
+    "regions_50": { "title": "Regionen-Wanderer", "desc": "Besuche 50 Regionen oder Provinzen" },
+    "cities_100": { "title": "Stadthüpfer", "desc": "Besuche 100 Städte" }
+  }
+}

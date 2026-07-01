@@ -1,0 +1,67 @@
+{
+  "tabs": {
+    "map": "Map",
+    "capitals": "Capitals",
+    "passport": "Passport"
+  },
+  "map": {
+    "title": "World Tracker",
+    "countriesVisited": "{{count}} / {{total}} countries visited",
+    "searchPlaceholder": "Search countries or cities...",
+    "searchNoMatch": "No matches found."
+  },
+  "capitals": {
+    "title": "World Capitals",
+    "visitedCount": "{{count}} / {{total}} capitals visited",
+    "searchPlaceholder": "Search capitals or countries..."
+  },
+  "passport": {
+    "title": "My Passport",
+    "percentExplored": "of the world explored",
+    "countriesCount": "{{count}} / {{total}} countries",
+    "capitalsVisited": "🏛️ World capitals visited",
+    "continents": "Continents",
+    "visitedCountries": "Visited countries ({{count}})",
+    "emptyHint": "Tap a country on the map to start filling your passport."
+  },
+  "countryDetail": {
+    "notFound": "Country not found.",
+    "markVisited": "Mark whole country visited",
+    "markedVisited": "✓ Whole country visited",
+    "regionsCount": "Regions ({{count}} / {{total}})",
+    "regionsHint": "Tap a region on the map to mark it visited. Tap it in the list to see its cities.",
+    "searchRegions": "Search regions...",
+    "noRegionsMatch": "No regions match your search.",
+    "citiesInRegion": "Cities in {{region}}",
+    "noCitiesInRegion": "No tracked cities in this region.",
+    "citiesCount": "Cities ({{count}} / {{total}})",
+    "searchCities": "Search cities...",
+    "noCitiesMatch": "No cities match your search."
+  },
+  "continents": {
+    "Africa": "Africa",
+    "Americas": "Americas",
+    "Antarctic": "Antarctic",
+    "Asia": "Asia",
+    "Europe": "Europe",
+    "Oceania": "Oceania"
+  },
+  "badges": {
+    "sectionTitle": "Badges",
+    "countries_1": { "title": "First Steps", "desc": "Visit your first country" },
+    "countries_5": { "title": "Explorer", "desc": "Visit 5 countries" },
+    "countries_25": { "title": "Globetrotter", "desc": "Visit 25 countries" },
+    "countries_100": { "title": "Century Club", "desc": "Visit 100 countries" },
+    "countries_all": { "title": "World Master", "desc": "Visit every country in the world" },
+    "continent_africa": { "title": "African Explorer", "desc": "Visit every country in Africa" },
+    "continent_americas": { "title": "Americas Explorer", "desc": "Visit every country in the Americas" },
+    "continent_asia": { "title": "Asian Explorer", "desc": "Visit every country in Asia" },
+    "continent_europe": { "title": "European Explorer", "desc": "Visit every country in Europe" },
+    "continent_oceania": { "title": "Island Hopper", "desc": "Visit every country in Oceania" },
+    "continent_antarctic": { "title": "Penguin Club", "desc": "Visit Antarctica" },
+    "capitals_10": { "title": "Capital Collector", "desc": "Visit 10 world capitals" },
+    "capitals_all": { "title": "Diplomat", "desc": "Visit every capital in the world" },
+    "regions_50": { "title": "Region Rambler", "desc": "Visit 50 regions or provinces" },
+    "cities_100": { "title": "City Hopper", "desc": "Visit 100 cities" }
+  }
+}

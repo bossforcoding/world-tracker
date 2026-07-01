@@ -1,0 +1,67 @@
+{
+  "tabs": {
+    "map": "Mappa",
+    "capitals": "Capitali",
+    "passport": "Passaporto"
+  },
+  "map": {
+    "title": "World Tracker",
+    "countriesVisited": "{{count}} / {{total}} paesi visitati",
+    "searchPlaceholder": "Cerca paesi o città...",
+    "searchNoMatch": "Nessun risultato."
+  },
+  "capitals": {
+    "title": "Capitali del mondo",
+    "visitedCount": "{{count}} / {{total}} capitali visitate",
+    "searchPlaceholder": "Cerca capitali o paesi..."
+  },
+  "passport": {
+    "title": "Il mio passaporto",
+    "percentExplored": "del mondo esplorato",
+    "countriesCount": "{{count}} / {{total}} paesi",
+    "capitalsVisited": "🏛️ Capitali del mondo visitate",
+    "continents": "Continenti",
+    "visitedCountries": "Paesi visitati ({{count}})",
+    "emptyHint": "Tocca un paese sulla mappa per iniziare a riempire il tuo passaporto."
+  },
+  "countryDetail": {
+    "notFound": "Paese non trovato.",
+    "markVisited": "Segna intero paese come visitato",
+    "markedVisited": "✓ Intero paese visitato",
+    "regionsCount": "Regioni ({{count}} / {{total}})",
+    "regionsHint": "Tocca una regione sulla mappa per segnarla visitata. Toccala nella lista per vedere le sue città.",
+    "searchRegions": "Cerca regioni...",
+    "noRegionsMatch": "Nessuna regione corrisponde alla ricerca.",
+    "citiesInRegion": "Città in {{region}}",
+    "noCitiesInRegion": "Nessuna città tracciata in questa regione.",
+    "citiesCount": "Città ({{count}} / {{total}})",
+    "searchCities": "Cerca città...",
+    "noCitiesMatch": "Nessuna città corrisponde alla ricerca."
+  },
+  "continents": {
+    "Africa": "Africa",
+    "Americas": "Americhe",
+    "Antarctic": "Antartide",
+    "Asia": "Asia",
+    "Europe": "Europa",
+    "Oceania": "Oceania"
+  },
+  "badges": {
+    "sectionTitle": "Badge",
+    "countries_1": { "title": "Primi passi", "desc": "Visita il tuo primo paese" },
+    "countries_5": { "title": "Esploratore", "desc": "Visita 5 paesi" },
+    "countries_25": { "title": "Giramondo", "desc": "Visita 25 paesi" },
+    "countries_100": { "title": "Club dei cento", "desc": "Visita 100 paesi" },
+    "countries_all": { "title": "Maestro del mondo", "desc": "Visita ogni paese del mondo" },
+    "continent_africa": { "title": "Esploratore d'Africa", "desc": "Visita ogni paese dell'Africa" },
+    "continent_americas": { "title": "Esploratore d'America", "desc": "Visita ogni paese delle Americhe" },
+    "continent_asia": { "title": "Esploratore d'Asia", "desc": "Visita ogni paese dell'Asia" },
+    "continent_europe": { "title": "Esploratore d'Europa", "desc": "Visita ogni paese dell'Europa" },
+    "continent_oceania": { "title": "Cacciatore di isole", "desc": "Visita ogni paese dell'Oceania" },
+    "continent_antarctic": { "title": "Club dei pinguini", "desc": "Visita l'Antartide" },
+    "capitals_10": { "title": "Collezionista di capitali", "desc": "Visita 10 capitali del mondo" },
+    "capitals_all": { "title": "Diplomatico", "desc": "Visita ogni capitale del mondo" },
+    "regions_50": { "title": "Vagabondo delle regioni", "desc": "Visita 50 regioni o province" },
+    "cities_100": { "title": "Cacciatore di città", "desc": "Visita 100 città" }
+  }
+}
