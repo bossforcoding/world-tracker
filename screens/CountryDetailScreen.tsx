@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from "react";
 import {
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -8,6 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Svg, { Path } from "react-native-svg";
 import * as Haptics from "expo-haptics";
 import { useTranslation } from "react-i18next";
@@ -51,7 +51,7 @@ export default function CountryDetailScreen(props: any) {
 
   if (!country) {
     return (
-      <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
+      <SafeAreaView edges={["bottom", "left", "right"]} style={[styles.container, { backgroundColor: theme.background }]}>
         <Text style={{ color: theme.text }}>{t("countryDetail.notFound")}</Text>
       </SafeAreaView>
     );
@@ -112,7 +112,7 @@ export default function CountryDetailScreen(props: any) {
                 style={[styles.row, { borderBottomColor: theme.border }]}
                 onPress={() => handleCityPress(city.id)}
               >
-                <Text style={{ color: theme.text, fontSize: 15 }}>
+                <Text style={{ color: theme.text, fontSize: 13 }}>
                   {city.capital ? "★ " : ""}
                   {city.name}
                 </Text>
@@ -131,7 +131,7 @@ export default function CountryDetailScreen(props: any) {
   };
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
+    <SafeAreaView edges={["bottom", "left", "right"]} style={[styles.container, { backgroundColor: theme.background }]}>
       <ScrollView contentContainerStyle={styles.content}>
         <Text style={[styles.title, { color: theme.text }]}>
           {country.flag} {getCountryName(country, i18n.language)}
@@ -208,7 +208,7 @@ export default function CountryDetailScreen(props: any) {
                       <Text
                         style={{
                           color: isExpanded ? theme.primary : theme.text,
-                          fontSize: 15,
+                          fontSize: 13,
                           fontWeight: isExpanded ? "700" : "400",
                         }}
                       >
@@ -245,7 +245,7 @@ export default function CountryDetailScreen(props: any) {
                                 style={styles.expandedCityRow}
                                 onPress={() => handleCityPress(city.id)}
                               >
-                                <Text style={{ color: theme.text, fontSize: 14 }}>
+                                <Text style={{ color: theme.text, fontSize: 12 }}>
                                   {city.capital ? "★ " : ""}
                                   {city.name}
                                 </Text>
@@ -289,28 +289,28 @@ export default function CountryDetailScreen(props: any) {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { padding: 16, paddingBottom: 40 },
-  title: { fontSize: 24, fontWeight: "700", marginBottom: 12 },
+  content: { padding: 14, paddingBottom: 32 },
+  title: { fontSize: 19, fontWeight: "700", marginBottom: 10 },
   wholeCountryButton: {
-    borderRadius: 12,
-    borderWidth: StyleSheet.hairlineWidth,
-    paddingVertical: 14,
-    alignItems: "center",
-    marginBottom: 16,
-  },
-  sectionTitle: { fontSize: 16, fontWeight: "700", marginTop: 12, marginBottom: 4 },
-  hint: { fontSize: 12, marginBottom: 8 },
-  mapWrapper: { alignItems: "center", marginBottom: 16 },
-  search: {
     borderRadius: 10,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    marginBottom: 10,
-    fontSize: 14,
+    paddingVertical: 11,
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  sectionTitle: { fontSize: 14, fontWeight: "700", marginTop: 10, marginBottom: 3 },
+  hint: { fontSize: 11, marginBottom: 6 },
+  mapWrapper: { alignItems: "center", marginBottom: 12 },
+  search: {
+    borderRadius: 9,
+    borderWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    marginBottom: 8,
+    fontSize: 13,
   },
   listCard: {
-    borderRadius: 12,
+    borderRadius: 10,
     borderWidth: StyleSheet.hairlineWidth,
     overflow: "hidden",
   },
@@ -318,20 +318,20 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
   expandedPanel: {
-    paddingHorizontal: 16,
-    paddingVertical: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 8,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  expandedTitle: { fontSize: 12, fontWeight: "700", marginBottom: 6 },
+  expandedTitle: { fontSize: 11, fontWeight: "700", marginBottom: 5 },
   expandedCityRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingVertical: 6,
+    paddingVertical: 5,
   },
 });

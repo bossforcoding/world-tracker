@@ -86,11 +86,11 @@ export default function SearchBar({ theme, onSelectCountry, onSelectCity }: Prop
               >
                 <Text style={styles.flag}>{item.flag}</Text>
                 <View style={styles.rowText}>
-                  <Text style={{ color: theme.text, fontSize: 14, fontWeight: "600" }}>
+                  <Text style={{ color: theme.text, fontSize: 13, fontWeight: "600" }}>
                     {localizedName(item, i18n.language)}
                   </Text>
                   {item.kind === "city" && (
-                    <Text style={{ color: theme.subtext, fontSize: 12 }}>
+                    <Text style={{ color: theme.subtext, fontSize: 11 }}>
                       {localizedCountryName(item, i18n.language)}
                     </Text>
                   )}
@@ -108,22 +108,22 @@ export default function SearchBar({ theme, onSelectCountry, onSelectCity }: Prop
 }
 
 const styles = StyleSheet.create({
-  container: { paddingHorizontal: 16, paddingTop: 12, zIndex: 10 },
+  container: { paddingHorizontal: 14, paddingTop: 10, zIndex: 10 },
   input: {
-    borderRadius: 10,
+    borderRadius: 9,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 9,
-    fontSize: 14,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    fontSize: 13,
   },
   dropdown: {
     position: "absolute",
-    top: 48,
-    left: 16,
-    right: 16,
-    borderRadius: 10,
+    top: 42,
+    left: 14,
+    right: 14,
+    borderRadius: 9,
     borderWidth: StyleSheet.hairlineWidth,
-    maxHeight: 320,
+    maxHeight: 300,
     overflow: "hidden",
     elevation: 4,
     shadowColor: "#000",
@@ -131,15 +131,15 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 2 },
   },
-  dropdownScroll: { maxHeight: 320 },
+  dropdownScroll: { maxHeight: 300 },
   row: {
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    gap: 10,
+    gap: 8,
   },
   rowText: { flex: 1 },
-  flag: { fontSize: 18 },
+  flag: { fontSize: 15 },
 });

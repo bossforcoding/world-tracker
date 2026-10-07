@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
-import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View, Modal, Pressable } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View, Modal, Pressable } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { getAllCountries, getCountryName } from "../components/WorldMap";
 import { useVisited } from "../lib/VisitedContext";
@@ -48,7 +49,7 @@ export default function PassportScreen() {
   }, [visitedSet, allCountries, i18n.language]);
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
+    <SafeAreaView edges={["top", "left", "right"]} style={[styles.container, { backgroundColor: theme.background }]}>
       <ScrollView contentContainerStyle={styles.content}>
         <Text style={[styles.title, { color: theme.text }]}>{t("passport.title")}</Text>
 
@@ -84,8 +85,8 @@ export default function PassportScreen() {
         </View>
 
         <View style={[styles.statRow, { backgroundColor: theme.card, borderColor: theme.border }]}>
-          <Text style={{ color: theme.text, fontSize: 15 }}>{t("passport.capitalsVisited")}</Text>
-          <Text style={{ color: theme.primary, fontSize: 15, fontWeight: "700" }}>
+          <Text style={{ color: theme.text, fontSize: 13 }}>{t("passport.capitalsVisited")}</Text>
+          <Text style={{ color: theme.primary, fontSize: 13, fontWeight: "700" }}>
             {visitedCapitalsCount} / {ALL_CAPITALS.length}
           </Text>
         </View>
@@ -190,79 +191,79 @@ export default function PassportScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { padding: 16, paddingBottom: 32 },
-  title: { fontSize: 24, fontWeight: "700", marginBottom: 16 },
-  languageRow: { flexDirection: "row", gap: 8, marginBottom: 16 },
+  content: { padding: 14, paddingBottom: 28 },
+  title: { fontSize: 20, fontWeight: "700", marginBottom: 12 },
+  languageRow: { flexDirection: "row", gap: 6, marginBottom: 12 },
   languageChip: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 14,
     borderWidth: StyleSheet.hairlineWidth,
   },
   heroCard: {
-    borderRadius: 16,
+    borderRadius: 14,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingVertical: 24,
+    paddingVertical: 16,
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 14,
   },
-  heroNumber: { fontSize: 42, fontWeight: "800" },
-  heroLabel: { fontSize: 14, marginTop: 2 },
-  heroSub: { fontSize: 15, marginTop: 10, fontWeight: "600" },
-  sectionTitle: { fontSize: 16, fontWeight: "700", marginBottom: 8, marginTop: 4 },
+  heroNumber: { fontSize: 32, fontWeight: "800" },
+  heroLabel: { fontSize: 12, marginTop: 2 },
+  heroSub: { fontSize: 13, marginTop: 6, fontWeight: "600" },
+  sectionTitle: { fontSize: 14, fontWeight: "700", marginBottom: 6, marginTop: 2 },
   card: {
-    borderRadius: 12,
+    borderRadius: 10,
     borderWidth: StyleSheet.hairlineWidth,
-    padding: 12,
-    marginBottom: 20,
+    padding: 10,
+    marginBottom: 14,
   },
   statRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    borderRadius: 12,
+    borderRadius: 10,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-    marginBottom: 20,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+    marginBottom: 14,
   },
   badgeGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 10,
-    marginBottom: 20,
+    gap: 8,
+    marginBottom: 14,
   },
   badgeCard: {
-    width: 96,
-    borderRadius: 14,
+    width: 76,
+    borderRadius: 12,
     borderWidth: 1.5,
-    paddingVertical: 12,
-    paddingHorizontal: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 4,
     alignItems: "center",
   },
-  badgeIcon: { fontSize: 28, marginBottom: 6 },
-  badgeTitle: { fontSize: 11, fontWeight: "700", textAlign: "center" },
-  badgeProgress: { fontSize: 10, marginTop: 4 },
+  badgeIcon: { fontSize: 20, marginBottom: 4 },
+  badgeTitle: { fontSize: 9.5, fontWeight: "700", textAlign: "center" },
+  badgeProgress: { fontSize: 8.5, marginTop: 2 },
   continentRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingVertical: 6,
+    paddingVertical: 5,
   },
-  continentName: { fontSize: 15 },
-  continentCount: { fontSize: 15, fontWeight: "600" },
-  empty: { fontSize: 14, fontStyle: "italic" },
-  chipWrap: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  continentName: { fontSize: 13 },
+  continentCount: { fontSize: 13, fontWeight: "600" },
+  empty: { fontSize: 13, fontStyle: "italic" },
+  chipWrap: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
   chip: {
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-    borderRadius: 20,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 16,
     borderWidth: StyleSheet.hairlineWidth,
-    gap: 6,
+    gap: 5,
   },
-  chipFlag: { fontSize: 16 },
-  chipText: { fontSize: 13, fontWeight: "500" },
+  chipFlag: { fontSize: 13 },
+  chipText: { fontSize: 12, fontWeight: "500" },
   modalBackdrop: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.4)",
@@ -272,21 +273,21 @@ const styles = StyleSheet.create({
   },
   modalCard: {
     width: "100%",
-    maxWidth: 320,
-    borderRadius: 20,
+    maxWidth: 280,
+    borderRadius: 18,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingVertical: 28,
-    paddingHorizontal: 20,
+    paddingVertical: 22,
+    paddingHorizontal: 18,
     alignItems: "center",
   },
-  modalIcon: { fontSize: 48, marginBottom: 12 },
-  modalTitle: { fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
-  modalDesc: { fontSize: 14, textAlign: "center", marginBottom: 14 },
-  modalProgress: { fontSize: 16, fontWeight: "700" },
-  modalStatus: { fontSize: 20, marginTop: 6, marginBottom: 16 },
+  modalIcon: { fontSize: 38, marginBottom: 10 },
+  modalTitle: { fontSize: 16, fontWeight: "800", marginBottom: 6, textAlign: "center" },
+  modalDesc: { fontSize: 13, textAlign: "center", marginBottom: 12 },
+  modalProgress: { fontSize: 14, fontWeight: "700" },
+  modalStatus: { fontSize: 17, marginTop: 4, marginBottom: 12 },
   modalClose: {
-    paddingHorizontal: 28,
-    paddingVertical: 10,
-    borderRadius: 20,
+    paddingHorizontal: 22,
+    paddingVertical: 8,
+    borderRadius: 16,
   },
 });

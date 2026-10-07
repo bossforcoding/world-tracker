@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
-import { SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View, FlatList } from "react-native";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, FlatList } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { useTranslation } from "react-i18next";
 import { useVisited } from "../lib/VisitedContext";
@@ -49,13 +50,13 @@ export default function CapitalsScreen() {
         <View style={styles.rowLeft}>
           <Text style={styles.flag}>{item.countryFlag}</Text>
           <View>
-            <Text style={{ color: theme.text, fontSize: 15, fontWeight: "600" }}>{item.name}</Text>
-            <Text style={{ color: theme.subtext, fontSize: 12 }}>
+            <Text style={{ color: theme.text, fontSize: 13, fontWeight: "600" }}>{item.name}</Text>
+            <Text style={{ color: theme.subtext, fontSize: 11 }}>
               {localizedCountryName(item, i18n.language)}
             </Text>
           </View>
         </View>
-        <Text style={{ color: isVisited ? theme.visited : theme.subtext, fontWeight: "700", fontSize: 16 }}>
+        <Text style={{ color: isVisited ? theme.visited : theme.subtext, fontWeight: "700", fontSize: 14 }}>
           {isVisited ? "✓" : "+"}
         </Text>
       </TouchableOpacity>
@@ -63,7 +64,7 @@ export default function CapitalsScreen() {
   };
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
+    <SafeAreaView edges={["top", "left", "right"]} style={[styles.container, { backgroundColor: theme.background }]}>
       <View style={[styles.header, { borderBottomColor: theme.border }]}>
         <Text style={[styles.title, { color: theme.text }]}>{t("capitals.title")}</Text>
         <Text style={[styles.stats, { color: theme.subtext }]}>
@@ -93,29 +94,29 @@ export default function CapitalsScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   header: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  title: { fontSize: 20, fontWeight: "700" },
-  stats: { fontSize: 14, marginTop: 2 },
+  title: { fontSize: 17, fontWeight: "700" },
+  stats: { fontSize: 12, marginTop: 1 },
   search: {
-    marginHorizontal: 16,
-    marginTop: 12,
-    borderRadius: 10,
+    marginHorizontal: 14,
+    marginTop: 10,
+    borderRadius: 9,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    fontSize: 14,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    fontSize: 13,
   },
-  listContent: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 24 },
+  listContent: { paddingHorizontal: 14, paddingTop: 6, paddingBottom: 20 },
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingVertical: 10,
+    paddingVertical: 7,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  rowLeft: { flexDirection: "row", alignItems: "center", gap: 10 },
-  flag: { fontSize: 22 },
+  rowLeft: { flexDirection: "row", alignItems: "center", gap: 8 },
+  flag: { fontSize: 18 },
 });
