@@ -2,6 +2,8 @@
 
 A mobile app to keep track of the places you have visited around the world, built with React Native and Expo.
 
+**[Live demo (web version)](https://bossforcoding.github.io/world-tracker/)**
+
 ## Features
 
 - **Interactive world map:** tap a country to mark it as visited and see how much of the world you have explored

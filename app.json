@@ -20,7 +20,8 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "World Tracker"
     },
     "plugins": [
       "expo-localization",
@@ -30,6 +31,9 @@
       "eas": {
         "projectId": "949962a1-763e-480d-80d4-7bf617bf07ff"
       }
+    },
+    "experiments": {
+      "baseUrl": "/world-tracker"
     }
   }
 }
